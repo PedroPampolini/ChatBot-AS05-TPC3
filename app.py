@@ -87,4 +87,4 @@ def debug():
 
 if __name__ == '__main__':
     socketio.init_app(app)
-    socketio.run(app, debug=True,port=5322)
+    socketio.run(app, debug=True, allow_unsafe_werkzeug=True)
