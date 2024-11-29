@@ -1,3 +1,6 @@
+import checkDependencies
+checkDependencies.installApp()
+
 from flask import Flask, render_template, Response, request
 from flask_socketio import SocketIO, emit
 from Bot import Bot, ModelName
