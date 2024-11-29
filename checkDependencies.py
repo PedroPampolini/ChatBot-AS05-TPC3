@@ -4,7 +4,7 @@ def installApp():
   try:
     import flask
   except:
-    installLib('Flask')
+    installLib('flask')
   try:
     import flask_socketio
   except:
@@ -22,7 +22,20 @@ def installApp():
   except:
     installLib('torch')
 
+  try:
+    import flask
+    import flask_socketio
+    import transformers
+    import PyPDF2
+    import torch
+  except Exception as e:
+    print(f"[ERROR] {e}")
+    print("[ERROR] Could not install all dependencies")
+    print("[ERROR] Please install the missing dependencies manually")
+    exit(1)
+
   
 
 def installLib(lib:str):
+  print(f"[DEBUG] Installing {lib}")
   os.system(f'{pip} install {lib}')
