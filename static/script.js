@@ -17,7 +17,7 @@ function sendMessage() {
 
 $(document).ready(function () {
   socket = io.connect(
-    "http://" + document.domain + ":" + location.port + "/chat"
+    "https://" + document.domain + ":" + location.port + "/chat"
   );
   socket.on("connect", function () {
     socket.emit("joined", {});
