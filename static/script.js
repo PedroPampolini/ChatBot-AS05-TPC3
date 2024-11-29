@@ -17,8 +17,9 @@ function sendMessage() {
 
 $(document).ready(function () {
   socket = io.connect(
-    "https://" + document.domain + ":" + location.port + "/chat"
+    "http://" + document.domain + ":" + location.port + "/chat"
   );
+  console.warn("http://" + document.domain + ":" + location.port + "/chat")
   socket.on("connect", function () {
     socket.emit("joined", {});
   });
@@ -28,6 +29,9 @@ $(document).ready(function () {
   socket.on("sendAlert", function (data) {
     console.log("alert received", data);
     alert(data.msg);
+  });
+  socket.on("connect_error", function (err) {
+    console.error("Connection error:", err);
   });
 
   $("#text").keypress(function (e) {

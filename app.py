@@ -10,8 +10,8 @@ import os
 import warnings
 warnings.filterwarnings("ignore")
 
-socketio = SocketIO()
 app = Flask(__name__)
+socketio = SocketIO(app, cors_allowed_origins="*")
 bot = Bot(ModelName.roberta2)
 
 @socketio.on('connect', namespace='/chat')
