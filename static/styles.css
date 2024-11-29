@@ -1,0 +1,133 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #4a90e2;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+form input[type="file"] {
+  margin-right: 10px;
+  padding: 5px;
+}
+
+form input[type="submit"] {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #357abd;
+}
+
+#mainArea {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  gap: 20px;
+}
+
+#chatArea {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#chat {
+  width: 100%;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#text {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#submitButton {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+#submitButton:hover {
+  background-color: #218838;
+}
+
+#fileListArea {
+  flex: 2;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+#fileListArea .fileListHeader h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#fileListArea .fileListHeader button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#fileListArea ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#fileListArea li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#fileListArea li:last-child {
+  border-bottom: none;
+}
