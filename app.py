@@ -81,6 +81,10 @@ def deletePdfList():
     os.remove(os.path.join('uploadedPdf', file))
   return Response(status=200)
 
+@app.route('/debug')
+def debug():
+  return '<h1>I AM ALIVE</h1>'
+
 if __name__ == '__main__':
     socketio.init_app(app)
     socketio.run(app, debug=True,port=5322)
