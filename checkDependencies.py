@@ -26,8 +26,3 @@ def installApp():
 
 def installLib(lib:str):
   os.system(f'{pip} install {lib}')
-
-
-
-from typing import *
-import torch
